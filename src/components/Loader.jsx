@@ -2,7 +2,9 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <span className='loader'></span>
+    <div className='text-center my-5'>
+      <span className='loader'></span>
+    </div>
   )
 }
 
