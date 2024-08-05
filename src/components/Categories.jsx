@@ -2,13 +2,15 @@ import React, { useEffect} from 'react'
 
 const Categories = ({categories,setCategories,setCategory}) => {
     const handleCategoryChange = (e) =>{
-       
+     
         setCategory(e.target.value)
     }
-    const fetchCategories = () =>{
-        fetch('https://fakestoreapi.com/products/categories')
-        .then(res=>res.json())
-        .then(json=>setCategories(json))
+    const fetchCategories = async() =>{
+       
+        const res = await  fetch('https://fakestoreapi.com/products/categories');
+        const data = await res.json()
+        setCategories(data)
+        
     }
     useEffect(()=>{
         fetchCategories()
