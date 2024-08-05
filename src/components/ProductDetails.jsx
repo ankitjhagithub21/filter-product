@@ -21,14 +21,15 @@ const ProductDetails = () => {
         return <Loader/>
     }
   return (
-    <div className='container mx-auto flex flex-wrap my-24'>
+    <div className='container mx-auto flex flex-wrap my-24 px-5'>
       <div className='lg:w-1/2 w-full'>
         <img src={product.image} alt="" width={300} className='mx-auto' />
       </div>
-      <div className='lg:w-1/2 w-full'>
+      <div className='lg:w-1/2 w-full flex flex-col items-start gap-3'>
         <h1 className='text-3xl font-bold'>{product.title}</h1>
         <p>{product.description}</p>
         <p >₹ {product.price}</p>
+        <button className='px-4 py-2 bg-green-500 text-white rounded-lg'>ADD TO CART</button>
       </div>
     </div>
   )
