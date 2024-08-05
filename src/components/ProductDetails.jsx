@@ -23,7 +23,7 @@ const ProductDetails = () => {
   return (
     <div className='container mx-auto flex flex-wrap my-24 px-5'>
       <div className='lg:w-1/2 w-full'>
-        <img src={product.image} alt="" width={300} className='mx-auto' />
+        <img src={product.image} alt=""  className='mx-auto p-5 w-96' />
       </div>
       <div className='lg:w-1/2 w-full flex flex-col items-start gap-3'>
         <h1 className='text-3xl font-bold'>{product.title}</h1>
