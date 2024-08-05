@@ -14,9 +14,9 @@ const Categories = ({categories,setCategories,setCategory}) => {
         fetchCategories()
     },[])
   return (
-   <div className='my-5 text-center'>
+   <div className='my-5 text-center px-5'>
    
-     <select className='w-1/2 mx-auto p-2 cursor-pointer border-2 rounded-lg outline-none' onChange={handleCategoryChange}>
+     <select className='lg:w-1/2  w-full mx-auto p-2 cursor-pointer border-2 rounded-lg outline-none' onChange={handleCategoryChange}>
         <option value="all">All</option>
      {
         categories.map((category,index)=>{
