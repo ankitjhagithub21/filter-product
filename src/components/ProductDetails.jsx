@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import Loader from './Loader'
 
 const ProductDetails = () => {
@@ -19,6 +19,10 @@ const ProductDetails = () => {
     },[id])
     if(loading){
         return <Loader/>
+    }
+
+    if(!product){
+      return <Navigate to={"/"}/>
     }
   return (
     <div className='container mx-auto flex flex-wrap my-24 px-5'>
