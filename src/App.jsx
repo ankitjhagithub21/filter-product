@@ -1,17 +1,19 @@
-import React,{useState} from 'react'
 import "./App.css"
-import Products from './components/Products'
-import Categories from './components/Categories'
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import Home from './components/Home'
+import ProductDetails from './components/ProductDetails'
 const App = () => {
-  const [categories,setCategories] = useState([])
-  const [products,setProducts] = useState([])
-  const [category,setCategory] = useState('all')
+ 
+ 
   return (
     
-    <div>
-      <Categories categories={categories} setCategories={setCategories} setCategory={setCategory}/>
-      <Products products={products} setProducts={setProducts} category={category}/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/products/:id' element={<ProductDetails/>}/>
+    </Routes>
+     
+    </BrowserRouter>
   )
 }
 

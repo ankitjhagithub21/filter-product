@@ -2,7 +2,7 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div className='text-center my-5'>
+    <div className='h-screen w-full flex items-center justify-center'>
       <span className='loader'></span>
     </div>
   )
